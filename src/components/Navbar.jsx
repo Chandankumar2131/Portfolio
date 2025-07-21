@@ -23,7 +23,7 @@ export default function Navbar() {
 
   return (
     <div className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-md text-white shadow-md">
-      <div className="flex justify-between items-center px-6 py-4">
+      <div className="flex justify-between items-center px-6 py-6">
         {/* Left - Name */}
         <Link
           to="hero"
