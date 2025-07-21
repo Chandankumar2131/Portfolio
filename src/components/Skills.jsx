@@ -1,3 +1,4 @@
+// components/Skills.jsx
 import React from "react";
 import {
   SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiHtml5,
@@ -5,8 +6,8 @@ import {
   SiMongodb, SiFirebase, SiCplusplus, SiGit, SiVscodium,
   SiPostman, SiAndroidstudio
 } from "react-icons/si";
-
 import { FaJava } from "react-icons/fa";
+import SkillGroup from "./SkillGroup"; // new import
 
 export default function Skills() {
   const frontend = [
@@ -32,7 +33,7 @@ export default function Skills() {
     { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
     { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
     { name: "Java", icon: <FaJava className="text-orange-500" /> },
-    { name: "C++", icon: <SiCplusplus className="text-blue-400" /> },
+
   ];
 
   const tools = [
@@ -42,41 +43,15 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="bg-[#0e0e0e] text-white py-20 px-6 md:px-20">
-      <h2 className="text-4xl font-bold text-center mb-12">My Skills</h2>
+    <section id="skills" className="min-h-screen px-6 py-20 bg-gray-900 text-white flex flex-col items-center">
+      <h2 className="text-4xl font-bold text-center mb-16">My Skills</h2>
 
-      <div className="space-y-14">
-        {/* Frontend */}
+      <div className="space-y-16">
         <SkillGroup title="Frontend Development" skills={frontend} />
-
-        {/* Backend */}
         <SkillGroup title="Backend Development" skills={backend} />
-
-        {/* Languages */}
         <SkillGroup title="Languages" skills={languages} />
-
-        {/* Tools & Environment */}
         <SkillGroup title="Tools & Environment" skills={tools} />
       </div>
     </section>
-  );
-}
-
-function SkillGroup({ title, skills }) {
-  return (
-    <div>
-      <h3 className="text-2xl font-semibold mb-6 text-center">{title}</h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center">
-        {skills.map((skill, i) => (
-          <div
-            key={i}
-            className="flex flex-col items-center bg-[#1c1c1c] p-4 rounded-xl shadow-md hover:bg-[#2a2a2a] transition"
-          >
-            <div className="text-4xl mb-2">{skill.icon}</div>
-            <p>{skill.name}</p>
-          </div>
-        ))}
-      </div>
-    </div>
   );
 }

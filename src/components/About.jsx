@@ -3,9 +3,9 @@ import chandandp2 from "../assets/chandandp2.jpg";
 
 export default function About() {
   return (
-    <div
+    <section
       id="about"
-      className="min-h-screen px-6 md:px-20 py-20 flex flex-col items-center bg-[#0e0e0e] text-white"
+      className="min-h-screen pt-24 px-6 md:px-20 pb-20 flex flex-col items-center bg-gray-900 text-white"
     >
       {/* Section Title */}
       <h2 className="text-4xl font-bold text-center">About Me</h2>
@@ -19,7 +19,7 @@ export default function About() {
             Hello, My name is <strong>Chandan Kumar</strong>. I’m a passionate MERN stack developer with a solid understanding of web technologies and a love for crafting seamless user experiences.
             <br /><br />
             I have completed my <strong>B.Tech in Information Technology</strong> from <strong>Dr. Ram Manohar Lohia Awadh University, Ayodhya</strong>.
-          
+            <br /><br />
             I’ve undergone <strong>MERN Stack training at Ducat</strong>, where I strengthened my skills in MongoDB, Express.js, React.js, and Node.js. So I have a hands on experience with technologies like HTML, CSS, Javascript and frameworks like React, React, Next.js, Apart from this I have a good hands on backend technologies like Node.js, Express.js, Databases like SqLite, MongoDB and also worked a lot with BAAS (Firebase and Supabase), For computer science fundamentals
             <br /><br />
             I enjoy working on real-world projects and continuously learning about backend systems, frontend design, data structures, and solving problems efficiently.
@@ -28,15 +28,17 @@ export default function About() {
           </p>
         </div>
 
-        {/* Right - Profile Image */}
-        <div className="md:w-1/3 flex justify-center">
-          <img
-            src={chandandp2}
-            alt="Chandan Kumar"
-            className="rounded-full w-72 h-72 object-cover border-4 border-white shadow-2xl"
-          />
-        </div>
+{/* Right - Profile Image with Hover Effect */}
+<div className="md:w-1/3 flex justify-center">
+  <img
+    src={chandandp2}
+    alt="Chandan Kumar"
+    className="rounded-full w-72 h-72 object-cover border-4 border-white shadow-2xl transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0_0_20px_4px_rgba(255,255,255,0.2)]"
+  />
+</div>
+
+
       </div>
-    </div>
+    </section>
   );
 }
