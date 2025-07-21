@@ -1,0 +1,83 @@
+import React from "react";
+import { FaCheckCircle } from "react-icons/fa";
+
+export default function Experience() {
+  const experiences = [
+    {
+      title: "MERN Stack Trainee",
+      type: "Internship",
+      company: "Ducat, Noida",
+      duration: "Jan 2024 – June 2024",
+      tasks: [
+        "Completed 6-month industrial training in MERN stack.",
+        "Built real-world apps using MongoDB, Express, React, Node.",
+        "Practiced REST APIs and CRUD operations.",
+        "Strengthened debugging, testing, and deployment skills.",
+      ],
+      stack: ["MongoDB", "Express.js", "React", "Node.js", "Git", "Postman"],
+    },
+    {
+      title: "Personal Projects",
+      type: "Self-driven",
+      company: "Remote",
+      duration: "Ongoing",
+      tasks: [
+        "Developed projects like blog app, eCommerce site, and news app.",
+        "Applied responsive and mobile-first design.",
+        "Integrated APIs, authentication, and pagination logic.",
+        "Used GitHub for version control and project collaboration.",
+      ],
+      stack: ["JavaScript", "React", "Tailwind CSS", "Node.js", "MongoDB"],
+    },
+  ];
+
+  return (
+    <div
+      id="experience"
+      className="min-h-screen px-4 py-20 bg-[#0e0e0e] text-white flex flex-col items-center"
+    >
+      <h2 className="text-4xl font-bold mb-16">Experience</h2>
+
+      <div className="w-full max-w-4xl space-y-10">
+        {experiences.map((exp, index) => (
+          <div
+            key={index}
+            className="bg-[#1c1c1c] border border-[#333] p-6 md:p-8 rounded-xl shadow-md"
+          >
+            <div className="mb-4">
+              <h3 className="text-2xl font-semibold flex items-center gap-2">
+                <span>💼</span> {exp.title}{" "}
+                <span className="text-sm font-normal text-gray-400 ml-2">
+                  - {exp.type}
+                </span>
+              </h3>
+              <p className="text-gray-400">
+                {exp.company} | <span>{exp.duration}</span>
+              </p>
+            </div>
+
+            <ul className="list-none space-y-2 mb-4 text-gray-300">
+              {exp.tasks.map((task, i) => (
+                <li key={i} className="flex gap-2 items-start">
+                  <FaCheckCircle className="text-green-400 mt-1" />
+                  <span>{task}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex flex-wrap gap-2">
+              {exp.stack.map((tech, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 bg-[#222] text-green-300 text-sm rounded-full border border-green-700"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
