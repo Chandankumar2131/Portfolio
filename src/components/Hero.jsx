@@ -2,7 +2,10 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen pt-24 bg-gray-900 text-white flex flex-col items-center justify-center text-center px-4">
+    <section
+      id="hero"
+      className="scroll-mt-24 min-h-screen pt-24 bg-gray-900 text-white flex flex-col items-center justify-center text-center px-4"
+    >
       <h1 className="text-4xl sm:text-5xl font-bold mb-4">
         Hi, I'm Chandan Kumar! <span className="inline-block animate-wave">👋</span>
       </h1>

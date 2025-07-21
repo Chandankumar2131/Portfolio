@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         {/* Left side text */}
         <p className="text-sm text-center md:text-left">
-          © 2024 Aayush Pandey. All rights reserved.
+          © 2025 Chandan Kumar. All rights reserved.
         </p>
 
         {/* Right side links */}
