@@ -7,9 +7,9 @@ export default function Experience() {
       title: "MERN Stack Trainee",
       type: "Internship",
       company: "Ducat, Noida",
-      duration: "Jan 2024 – June 2024",
+      duration: "May 2024 – Mar 2025",
       tasks: [
-        "Completed 6-month industrial training in MERN stack.",
+        "Completed 10-month industrial training in MERN stack.",
         "Built real-world apps using MongoDB, Express, React, Node.",
         "Practiced REST APIs and CRUD operations.",
         "Strengthened debugging, testing, and deployment skills.",
