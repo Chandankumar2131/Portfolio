@@ -23,7 +23,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://www.linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/chandan-kumar-19748a228/"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 hover:text-white transition"
@@ -33,7 +33,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://github.com/yourgithub"
+            href="https://github.com/Chandankumar2131"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-1 hover:text-white transition"
