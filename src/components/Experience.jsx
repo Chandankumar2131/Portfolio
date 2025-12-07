@@ -11,23 +11,35 @@ export default function Experience() {
       tasks: [
         "Completed 10-month industrial training in MERN stack.",
         "Built real-world apps using MongoDB, Express, React, Node.",
-        "Practiced REST APIs and CRUD operations.",
-        "Strengthened debugging, testing, and deployment skills.",
+        "Practiced REST APIs, CRUD operations, authentication, and middleware.",
+        "Strengthened debugging, testing, performance optimization, and deployment workflows.",
       ],
       stack: ["MongoDB", "Express.js", "React", "Node.js", "Git", "Postman"],
     },
+
     {
       title: "Personal Projects",
       type: "Self-driven",
       company: "Remote",
       duration: "Ongoing",
       tasks: [
-        "Developed projects like blog app, eCommerce site, and news app.",
-        "Applied responsive and mobile-first design.",
-        "Integrated APIs, authentication, and pagination logic.",
-        "Used GitHub for version control and project collaboration.",
+        "Built a production-grade EdTech platform with JWT auth, role-based access, course creation, Cloudinary uploads, and Razorpay payments.",
+        "Added real-time email notifications (Nodemailer) for signup, purchase confirmation, and password reset flow.",
+        "Developed a Pagination Web App with optimized API calls, dynamic page navigation, and global state handling using Redux Toolkit.",
+        "Created a modern personal portfolio website deployed on Vercel showcasing projects, skills, and experience.",
+        "Developed complete apps including a Blog App, E-Commerce App, and News App with API integration and responsive UI.",
+        "Applied performance optimization, clean folder structure, reusable components, version control, and deployment best practices.",
       ],
-      stack: ["JavaScript", "React", "Tailwind CSS", "Node.js", "MongoDB"],
+      stack: [
+        "JavaScript",
+        "React.js",
+        "Redux Toolkit",
+        "Tailwind CSS",
+        "Node.js",
+        "Express.js",
+        "MongoDB",
+        "Cloudinary",
+      ],
     },
   ];
 

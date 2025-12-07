@@ -5,8 +5,17 @@ import CourseCraft from "../assets/CourseCraft.png";
 import WeatherWise from "../assets/WeatherWise.png";
 import PokemonApp from "../assets/PokemonApp.png";
 import ToursApp from "../assets/ToursApp.png";
+import EdTech from "../assets/EdTech.png"; // Add a screenshot for Ed.Tech project
 
 const projects = [
+  {
+    title: "Ed.Tech Education Platform",
+    description:
+      "A comprehensive EdTech platform built with MERN stack. Users can browse, enroll in courses, and manage their learning journey.",
+    image: EdTech,
+    liveLink: "https://ed-tech-frontend-sigma-seven.vercel.app/",
+    codeLink: "https://github.com/Chandankumar2131/EdTech_Frontend",
+  },
   {
     title: "StudyNotion Clone",
     description:
@@ -69,7 +78,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="bg-[#1c1c1c] border border-[#333] rounded-xl shadow-md overflow-hidden"
+            className="bg-[#1c1c1c] border border-[#333] rounded-xl shadow-md overflow-hidden hover:scale-105 transition-transform duration-300"
           >
             <img
               src={project.image}
