@@ -15,17 +15,27 @@ export default function About() {
         
         {/* Left - Text Content */}
         <div className="w-full md:w-[60%] text-lg leading-8 text-gray-300 text-center md:text-left">
-          <p>
-            Hello, My name is <strong>Chandan Kumar</strong>. I’m a passionate MERN stack developer with a solid understanding of web technologies and a love for crafting seamless user experiences.
-            
-            I have completed my <strong>B.Tech in Information Technology</strong> from <strong>Dr. Ram Manohar Lohia Awadh University, Ayodhya</strong>.
-            
-            I’ve undergone <strong>MERN Stack training at Ducat</strong>, where I strengthened my skills in MongoDB, Express.js, React.js, and Node.js. So I have a hands on experience with technologies like HTML, CSS, Javascript and frameworks like React, React, Next.js, Apart from this I have a good hands on backend technologies like Node.js, Express.js, Databases like SqLite, MongoDB and also worked a lot with BAAS (Firebase and Supabase), For computer science fundamentals
-            
-            I enjoy working on real-world projects and continuously learning about backend systems, frontend design, data structures, and solving problems efficiently.
-           
-            I aim to build not just functional apps but also aesthetically pleasing and user-friendly interfaces for an intuitive digital experience.
-          </p>
+      <p>
+  Hello, my name is <strong>Chandan Kumar</strong>. I am a Software Engineer
+  specializing in MERN Stack development with experience building scalable
+  full-stack applications using MongoDB, Express.js, React.js, and Node.js.
+
+  I completed my <strong>B.Tech in Information Technology</strong> from{" "}
+  <strong>Dr. Ram Manohar Lohia Awadh University, Ayodhya</strong> and received
+  industrial training in MERN Stack Development from{" "}
+  <strong>Ducat, Noida</strong>.
+
+  I gained industry experience through a 6-month internship at{" "}
+  <strong>Tech Mahindra</strong>, where I worked on full-stack web development,
+  API integration, authentication systems, and software development best
+  practices.
+
+  Currently, I work as a <strong>Software Engineer (MERN)</strong> at{" "}
+  <strong>Alice's Tech Solutions</strong>, developing business applications,
+  HRM systems, RESTful APIs, and responsive web interfaces. I am passionate
+  about creating efficient, secure, and user-friendly software while
+  continuously learning modern technologies and industry best practices.
+</p>
         </div>
 
 {/* Right - Profile Image with Hover Effect */}

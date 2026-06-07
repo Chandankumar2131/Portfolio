@@ -4,41 +4,73 @@ import { FaCheckCircle } from "react-icons/fa";
 export default function Experience() {
   const experiences = [
     {
-      title: "MERN Stack Trainee",
-      type: "Internship",
-      company: "Ducat, Noida",
-      duration: "May 2024 – Mar 2025",
+      title: "Software Engineer (MERN)",
+      type: "Full-Time",
+      company: "Alice's Tech Solutions",
+      duration: "Jun 2026 – Present",
       tasks: [
-        "Completed 10-month industrial training in MERN stack.",
-        "Built real-world apps using MongoDB, Express, React, Node.",
-        "Practiced REST APIs, CRUD operations, authentication, and middleware.",
-        "Strengthened debugging, testing, performance optimization, and deployment workflows.",
+        "Developing and maintaining scalable MERN stack applications for business clients.",
+        "Designing and implementing secure authentication and authorization systems using JWT.",
+        "Building productivity and HRM solutions with attendance tracking, leave management, employee monitoring, and reporting modules.",
+        "Creating responsive and user-friendly interfaces using React.js and modern frontend development practices.",
+        "Developing RESTful APIs, managing MongoDB databases, and optimizing application performance.",
+        "Collaborating on deployment, bug fixing, feature enhancements, and system maintenance.",
       ],
-      stack: ["MongoDB", "Express.js", "React", "Node.js", "Git", "Postman"],
+      stack: [
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "Redux Toolkit",
+        "JWT",
+        "Git",
+        "Postman",
+        "Vercel",
+      ],
     },
 
     {
-      title: "Personal Projects",
-      type: "Self-driven",
-      company: "Remote",
-      duration: "Ongoing",
+      title: "MERN Stack Intern",
+      type: "Internship",
+      company: "Tech Mahindra",
+      duration: "Dec 2025 – May 2026",
       tasks: [
-        "Built a production-grade EdTech platform with JWT auth, role-based access, course creation, Cloudinary uploads, and Razorpay payments.",
-        "Added real-time email notifications (Nodemailer) for signup, purchase confirmation, and password reset flow.",
-        "Developed a Pagination Web App with optimized API calls, dynamic page navigation, and global state handling using Redux Toolkit.",
-        "Created a modern personal portfolio website deployed on Vercel showcasing projects, skills, and experience.",
-        "Developed complete apps including a Blog App, E-Commerce App, and News App with API integration and responsive UI.",
-        "Applied performance optimization, clean folder structure, reusable components, version control, and deployment best practices.",
+        "Worked on full-stack web application development using the MERN stack.",
+        "Developed and integrated REST APIs for seamless frontend-backend communication.",
+        "Implemented authentication, authorization, and role-based access control using JWT.",
+        "Collaborated with development teams using Git and industry-standard workflows.",
+        "Participated in debugging, testing, code reviews, and performance optimization.",
+        "Gained hands-on experience with real-world software development and deployment processes.",
       ],
       stack: [
-        "JavaScript",
-        "React.js",
-        "Redux Toolkit",
-        "Tailwind CSS",
-        "Node.js",
-        "Express.js",
         "MongoDB",
-        "Cloudinary",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "JWT",
+        "Git",
+        "Postman",
+      ],
+    },
+
+    {
+      title: "MERN Stack Trainee",
+      type: "Industrial Training",
+      company: "Ducat, Noida",
+      duration: "May 2024 – Mar 2025",
+      tasks: [
+        "Completed 10-month industrial training in MERN stack development.",
+        "Built real-world applications using MongoDB, Express.js, React.js, and Node.js.",
+        "Practiced REST APIs, CRUD operations, authentication, middleware, and database integration.",
+        "Strengthened debugging, testing, performance optimization, and deployment workflows.",
+      ],
+      stack: [
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "Git",
+        "Postman",
       ],
     },
   ];
@@ -60,11 +92,12 @@ export default function Experience() {
           >
             <div className="mb-4">
               <h3 className="text-2xl font-semibold flex items-center gap-2 text-green-400">
-                <span>💼</span> {exp.title}{" "}
+                <span>💼</span> {exp.title}
                 <span className="text-sm font-normal text-gray-400 ml-2">
                   - {exp.type}
                 </span>
               </h3>
+
               <p className="text-gray-400 mt-1">
                 {exp.company} | <span>{exp.duration}</span>
               </p>

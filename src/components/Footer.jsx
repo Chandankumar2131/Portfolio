@@ -16,7 +16,7 @@ export default function Footer() {
         <div className="flex items-center gap-6">
 
           {/* Resume */}
-        <a
+  <a
   href="/CHANDAN_KUMAR_RESUME.pdf"
   download="Chandan_Kumar_Resume.pdf"
   className="flex items-center gap-1 hover:text-green-400 transition duration-300"
