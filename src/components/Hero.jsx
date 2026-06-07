@@ -22,7 +22,7 @@ export default function Hero() {
       </h2>
 
       <h3 className="text-lg sm:text-xl text-gray-300 mb-6">
-        Building scalable web applications with React.js, Node.js, Express.js, and MongoDB.
+       Full Stack Developer | React.js | Node.js | Express.js | MongoDB 
 
       </h3>
 
