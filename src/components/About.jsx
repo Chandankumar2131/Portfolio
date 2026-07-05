@@ -45,7 +45,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="grid grid-cols-1 items-start gap-14 lg:grid-cols-[1.08fr_0.92fr]">
           <div>
             <h3 className="mb-6 text-3xl font-bold leading-tight text-white md:text-4xl">
               Hi, I am Chandan Kumar.
@@ -108,15 +108,15 @@ export default function About() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-[430px]">
-              <div className="absolute -inset-1 rounded-[2rem] bg-gradient-to-r from-cyan-400/50 via-blue-500/30 to-cyan-400/50 blur-xl opacity-60" />
-              <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.05] p-5 shadow-2xl backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-cyan-400/40">
-                <div className="relative overflow-hidden rounded-[1.5rem] border border-cyan-400/20 bg-slate-900">
+          <div className="flex justify-center lg:justify-end lg:pt-16">
+            <div className="relative w-full max-w-[370px] sm:max-w-[400px]">
+              <div className="absolute -inset-1 rounded-[1.75rem] bg-gradient-to-r from-cyan-400/35 via-blue-500/20 to-cyan-400/35 blur-xl opacity-50" />
+              <div className="relative overflow-hidden rounded-[1.75rem] border border-cyan-400/20 bg-cyan-400/10 p-4 shadow-2xl backdrop-blur-xl transition duration-500 hover:-translate-y-2 hover:border-cyan-400/40">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.25rem] border border-cyan-400/20 bg-slate-900">
                   <img
                     src={chandandp2}
                     alt="Chandan Kumar"
-                    className="h-[430px] w-full object-cover transition duration-500 hover:scale-105"
+                    className="h-full w-full object-cover object-center transition duration-500 hover:scale-105"
                   />
                 </div>
               </div>
