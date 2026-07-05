@@ -1,4 +1,5 @@
 import React from "react";
+import { motion as Motion } from "framer-motion";
 import StudyNotionClone from "../assets/StudyNotionClone.png";
 import Pagination from "../assets/Pagination.png";
 import CourseCraft from "../assets/CourseCraft.png";
@@ -6,8 +7,17 @@ import WeatherWise from "../assets/WeatherWise.png";
 import PokemonApp from "../assets/PokemonApp.png";
 import ToursApp from "../assets/ToursApp.png";
 import EdTech from "../assets/EdTech.png"; // Add a screenshot for Ed.Tech project
+import AlicesHRM from "../assets/AlicesHRM.svg";
 
 const projects = [
+  {
+    title: "Alice's Tech Solutions HRM",
+    description:
+      "A complete HRM workforce portal with role-based access, employee attendance, leave approvals, payroll, salary management, reports, and internal chat.",
+    image: AlicesHRM,
+    liveLink: "https://hrm.alicestechsolutions.com/login",
+    codeLink: "https://github.com/Chandankumar2131/Alices-Technology",
+  },
   {
     title: "Ed.Tech Education Platform",
     description:
@@ -76,14 +86,21 @@ export default function Projects() {
 
       <div className="w-full max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div
+          <Motion.div
             key={index}
+            initial={{ opacity: 0, y: 35 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.08 }}
+            viewport={{ once: true, amount: 0.2 }}
+            whileHover={{ y: -8, scale: 1.03 }}
             className="bg-[#1c1c1c] border border-[#333] rounded-xl shadow-md overflow-hidden hover:scale-105 transition-transform duration-300"
           >
-            <img
+            <Motion.img
               src={project.image}
               alt={project.title}
               className="w-full h-48 object-cover rounded-t-xl"
+              whileHover={{ scale: 1.06 }}
+              transition={{ duration: 0.35 }}
             />
             <div className="p-6 flex flex-col gap-3">
               <h3 className="text-2xl font-semibold text-white">
@@ -109,7 +126,7 @@ export default function Projects() {
                 </a>
               </div>
             </div>
-          </div>
+          </Motion.div>
         ))}
       </div>
     </section>

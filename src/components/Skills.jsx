@@ -4,9 +4,9 @@ import {
   SiReact, SiNextdotjs, SiTypescript, SiJavascript, SiHtml5,
   SiTailwindcss, SiVite, SiPrettier, SiNodedotjs, SiExpress,
   SiMongodb, SiFirebase, SiGit, SiVscodium, SiPostman,
-  SiRedux, SiJsonwebtokens, SiCloudflare
+  SiRedux, SiJsonwebtokens, SiCloudflare, SiDocker, SiRedis
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
+import { FaAws, FaJava } from "react-icons/fa";
 import SkillGroup from "./SkillGroup";
 
 export default function Skills() {
@@ -31,6 +31,7 @@ export default function Skills() {
     { name: "Cloudinary Uploads", icon: <SiCloudflare className="text-blue-300" /> },
     { name: "Razorpay Integration", icon: <SiCloudflare className="text-green-300" /> },
     { name: "Nodemailer (Real-time Mail)", icon: <SiExpress className="text-red-400" /> },
+    { name: "Redis", icon: <SiRedis className="text-red-500" /> },
   ];
 
   const languages = [
@@ -43,6 +44,8 @@ export default function Skills() {
     { name: "Git & GitHub", icon: <SiGit className="text-red-500" /> },
     { name: "VS Code", icon: <SiVscodium className="text-blue-500" /> },
     { name: "Postman", icon: <SiPostman className="text-orange-400" /> },
+    { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
+    { name: "AWS", icon: <FaAws className="text-orange-400" /> },
     { name: "Firebase Hosting", icon: <SiFirebase className="text-yellow-500" /> },
     { name: "Vercel Deployment", icon: <SiNextdotjs className="text-white" /> },
   ];

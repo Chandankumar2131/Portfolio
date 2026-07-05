@@ -5,6 +5,7 @@ import About from './components/About';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import HireMe from './components/HireMe.jsx';
 import Footer from './components/Footer.jsx';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
       <Experience/>
       <Projects/>
       <Skills/>
+      <HireMe/>
 <Footer/>
       {/* <section id="about" className="min-h-screen pt-24 bg-gray-900 text-white flex items-center justify-center">
         <h2 className="text-4xl font-bold">About Me</h2>

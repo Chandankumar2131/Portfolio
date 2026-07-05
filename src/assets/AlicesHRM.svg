@@ -1,0 +1,54 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="720" rx="28" fill="#07111f"/>
+  <rect x="34" y="34" width="1132" height="652" rx="24" fill="#0f172a" stroke="#1f3454" stroke-width="2"/>
+  <rect x="34" y="34" width="190" height="652" rx="24" fill="#050b18"/>
+  <text x="62" y="86" fill="#f8fafc" font-family="Arial, sans-serif" font-size="28" font-weight="700">Alice's Tech</text>
+  <text x="62" y="118" fill="#67e8f9" font-family="Arial, sans-serif" font-size="17" font-weight="700">HRM Portal</text>
+  <rect x="58" y="174" width="136" height="42" rx="10" fill="#083344" stroke="#155e75"/>
+  <text x="82" y="202" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="18" font-weight="700">Dashboard</text>
+  <text x="70" y="260" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18" font-weight="700">Attendance</text>
+  <text x="70" y="316" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18" font-weight="700">Leaves</text>
+  <text x="70" y="372" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18" font-weight="700">Payroll</text>
+  <text x="70" y="428" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18" font-weight="700">Chat</text>
+  <rect x="258" y="74" width="858" height="122" rx="16" fill="#111827" stroke="#29405f"/>
+  <text x="290" y="120" fill="#f8fafc" font-family="Arial, sans-serif" font-size="31" font-weight="800">Workforce Management Dashboard</text>
+  <text x="290" y="156" fill="#cbd5e1" font-family="Arial, sans-serif" font-size="19">Attendance, leaves, salary, payroll and internal chat in one secure workflow.</text>
+  <rect x="830" y="104" width="120" height="52" rx="14" fill="#062e3a" stroke="#0891b2"/>
+  <text x="860" y="138" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="17" font-weight="700">ADMIN</text>
+  <rect x="970" y="104" width="108" height="52" rx="14" fill="#052e16" stroke="#16a34a"/>
+  <text x="996" y="138" fill="#dcfce7" font-family="Arial, sans-serif" font-size="17" font-weight="700">HRM</text>
+  <rect x="258" y="226" width="260" height="132" rx="16" fill="#111827" stroke="#334155"/>
+  <rect x="550" y="226" width="260" height="132" rx="16" fill="#111827" stroke="#334155"/>
+  <rect x="842" y="226" width="274" height="132" rx="16" fill="#111827" stroke="#334155"/>
+  <circle cx="310" cy="292" r="31" fill="#0ea5e9"/>
+  <path d="M295 292l10 10 22-24" stroke="white" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="360" y="278" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16" font-weight="700">TODAY STATUS</text>
+  <text x="360" y="314" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="800">Checked In</text>
+  <circle cx="602" cy="292" r="31" fill="#7c3aed"/>
+  <path d="M588 300h28M592 286h20M596 276h12" stroke="white" stroke-width="7" stroke-linecap="round"/>
+  <text x="652" y="278" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16" font-weight="700">LEAVE REQUESTS</text>
+  <text x="652" y="314" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="800">Approve / Reject</text>
+  <circle cx="894" cy="292" r="31" fill="#16a34a"/>
+  <path d="M880 304h28v-26h-28v26zM887 272v12M901 272v12" stroke="white" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="944" y="278" fill="#94a3b8" font-family="Arial, sans-serif" font-size="16" font-weight="700">PAYROLL</text>
+  <text x="944" y="314" fill="#f8fafc" font-family="Arial, sans-serif" font-size="34" font-weight="800">Auto Calculated</text>
+  <rect x="258" y="398" width="858" height="218" rx="16" fill="#0b1221" stroke="#29405f"/>
+  <text x="290" y="442" fill="#f8fafc" font-family="Arial, sans-serif" font-size="24" font-weight="800">Complete HRM Workflow</text>
+  <rect x="290" y="476" width="132" height="58" rx="12" fill="#082f49" stroke="#0ea5e9"/>
+  <text x="326" y="512" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="17" font-weight="700">Login</text>
+  <path d="M432 505h54" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M472 493l14 12-14 12" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="496" y="476" width="132" height="58" rx="12" fill="#052e16" stroke="#22c55e"/>
+  <text x="530" y="512" fill="#dcfce7" font-family="Arial, sans-serif" font-size="17" font-weight="700">Check In</text>
+  <path d="M638 505h54" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M678 493l14 12-14 12" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="702" y="476" width="132" height="58" rx="12" fill="#312e81" stroke="#8b5cf6"/>
+  <text x="738" y="512" fill="#ede9fe" font-family="Arial, sans-serif" font-size="17" font-weight="700">Work</text>
+  <path d="M844 505h54" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M884 493l14 12-14 12" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="908" y="476" width="150" height="58" rx="12" fill="#3b1d04" stroke="#f97316"/>
+  <text x="942" y="512" fill="#ffedd5" font-family="Arial, sans-serif" font-size="17" font-weight="700">Payroll</text>
+  <text x="290" y="574" fill="#94a3b8" font-family="Arial, sans-serif" font-size="18">Role based access • Employee management • Reports • Salary slips • Secure profile updates</text>
+  <rect x="286" y="636" width="798" height="18" rx="9" fill="#0e7490"/>
+  <rect x="286" y="636" width="560" height="18" rx="9" fill="#22d3ee"/>
+</svg>
