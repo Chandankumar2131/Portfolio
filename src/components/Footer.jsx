@@ -4,48 +4,38 @@ import { HiDownload } from "react-icons/hi";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#121212] text-gray-400 py-6 px-4 border-t border-gray-700">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-
-        {/* Left side text */}
-        <p className="text-sm text-center md:text-left text-gray-500">
-          © 2025 Chandan Kumar. All rights reserved.
+    <footer className="border-t border-white/10 bg-slate-950 px-6 py-8 text-slate-400">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 md:flex-row">
+        <p className="text-center text-sm md:text-left">
+          © 2026 Chandan Kumar. Built with React and Tailwind CSS.
         </p>
 
-        {/* Right side links */}
-        <div className="flex items-center gap-6">
-
-          {/* Resume */}
-  <a
-  href="/CHANDAN_KUMAR_RESUME.pdf"
-  download="Chandan_Kumar_Resume.pdf"
-  className="flex items-center gap-1 hover:text-green-400 transition duration-300"
->
-  <HiDownload className="text-lg" />
-  <span>Resume</span>
-</a>
-
-
-          {/* LinkedIn */}
+        <div className="flex flex-wrap items-center justify-center gap-4">
+          <a
+            href="/CHANDAN_KUMAR_RESUME.pdf"
+            download="Chandan_Kumar_Resume.pdf"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm transition hover:border-cyan-400/40 hover:text-cyan-300"
+          >
+            <HiDownload />
+            Resume
+          </a>
           <a
             href="https://www.linkedin.com/in/chandan-kumar-19748a228/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-blue-400 transition duration-300"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm transition hover:border-cyan-400/40 hover:text-cyan-300"
           >
-            <FaLinkedin className="text-lg" />
-            <span>LinkedIn</span>
+            <FaLinkedin />
+            LinkedIn
           </a>
-
-          {/* GitHub */}
           <a
             href="https://github.com/Chandankumar2131"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:text-white transition duration-300"
+            className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm transition hover:border-cyan-400/40 hover:text-cyan-300"
           >
-            <FaGithub className="text-lg" />
-            <span>GitHub</span>
+            <FaGithub />
+            GitHub
           </a>
         </div>
       </div>

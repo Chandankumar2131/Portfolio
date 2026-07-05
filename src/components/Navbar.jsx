@@ -1,13 +1,45 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { Link } from 'react-scroll';
-import { FaChevronDown, FaEnvelope, FaTwitter, FaGithub, FaLinkedin, FaBars, FaTimes } from 'react-icons/fa';
+import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-scroll";
+import {
+  FaBars,
+  FaChevronDown,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaTimes,
+} from "react-icons/fa";
+
+const navItems = [
+  { label: "About", to: "about" },
+  { label: "Experience", to: "experience" },
+  { label: "Projects", to: "projects" },
+  { label: "Skills", to: "skills" },
+  { label: "Hire Me", to: "hire-me" },
+];
+
+const socialLinks = [
+  {
+    label: "Email",
+    href: "mailto:chandansinghrkt123@gmail.com",
+    icon: <FaEnvelope />,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/Chandankumar2131",
+    icon: <FaGithub />,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/chandan-kumar-19748a228/",
+    icon: <FaLinkedin />,
+  },
+];
 
 export default function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
 
-  // Close dropdown on outside click
   useEffect(() => {
     function handleClickOutside(event) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -16,89 +48,107 @@ export default function Navbar() {
     }
 
     document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
+    return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
   return (
-    <div className="fixed top-0 w-full z-50 bg-black/60 backdrop-blur-md text-white shadow-md">
-      <div className="flex justify-between items-center px-6 py-6">
-        {/* Left - Name */}
+    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-slate-950/75 text-white shadow-2xl backdrop-blur-xl">
+      <nav className="flex w-full items-center justify-between px-6 py-5 md:px-10">
         <Link
           to="hero"
-          smooth={true}
+          smooth
           duration={500}
-          className="text-2xl sm:text-3xl font-signature cursor-pointer hover:text-teal-400 transition"
+          style={{ fontFamily: "'Brush Script MT', 'Segoe Script', cursive" }}
+          className="cursor-pointer bg-gradient-to-r from-white via-cyan-200 to-sky-400 bg-clip-text text-3xl font-black text-transparent drop-shadow-[0_0_18px_rgba(34,211,238,0.18)] transition hover:from-cyan-200 hover:to-white md:text-4xl"
         >
           Chandan Kumar
         </Link>
 
-        {/* Desktop Nav */}
-        <ul className="hidden md:flex space-x-6 text-base font-medium items-center">
-          <li>
-            <Link to="about" smooth={true} duration={500} offset={-80} className="cursor-pointer hover:text-gray-400">About</Link>
-          </li>
-          <li>
-            <Link to="experience" smooth={true} duration={500} offset={-80} className="cursor-pointer hover:text-gray-400">Experience</Link>
-          </li>
-          <li>
-            <Link to="projects" smooth={true} duration={500} offset={-80} className="cursor-pointer hover:text-gray-400">Projects</Link>
-          </li>
-          <li>
-            <Link to="skills" smooth={true} duration={500} offset={-80} className="cursor-pointer hover:text-gray-400">Skills</Link>
-          </li>
+        <ul className="hidden items-center gap-6 text-sm font-semibold md:flex">
+          {navItems.map((item) => (
+            <li key={item.to}>
+              <Link
+                to={item.to}
+                smooth
+                duration={500}
+                offset={-80}
+                className="cursor-pointer text-slate-200 transition hover:text-cyan-300"
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
 
-          {/* Dropdown */}
           <li className="relative" ref={dropdownRef}>
             <button
-              onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="flex items-center space-x-1 hover:text-gray-400 focus:outline-none"
+              onClick={() => setDropdownOpen((value) => !value)}
+              className="flex items-center gap-2 text-slate-200 transition hover:text-cyan-300"
             >
-              <span>Socials</span>
-              <FaChevronDown className="text-xs mt-1" />
+              Socials <FaChevronDown className="text-xs" />
             </button>
 
             {dropdownOpen && (
-              <div className="absolute right-0 mt-2 w-48 bg-gray-900 text-white rounded-md shadow-lg z-50 border border-gray-700">
-                <a href="mailto:chandansinghrkt123@gmail.com" className="flex items-center px-4 py-2 hover:bg-gray-800" target="_blank" rel="noreferrer"><FaEnvelope className="mr-2" /> Email</a>
-                <a href="https://twitter.com/your-twitter-handle" className="flex items-center px-4 py-2 hover:bg-gray-800" target="_blank" rel="noreferrer"><FaTwitter className="mr-2" /> Twitter/X</a>
-                <a href="https://github.com/Chandankumar2131" className="flex items-center px-4 py-2 hover:bg-gray-800" target="_blank" rel="noreferrer"><FaGithub className="mr-2" /> GitHub</a>
-                <a href="https://linkedin.com/in/chandan-kumar-19748a228" className="flex items-center px-4 py-2 hover:bg-gray-800" target="_blank" rel="noreferrer"><FaLinkedin className="mr-2" /> LinkedIn</a>
+              <div className="absolute right-0 mt-4 w-48 overflow-hidden rounded-2xl border border-white/10 bg-slate-950/95 shadow-2xl backdrop-blur-xl">
+                {socialLinks.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="flex items-center gap-3 px-4 py-3 text-slate-300 transition hover:bg-cyan-400/10 hover:text-cyan-300"
+                  >
+                    {link.icon}
+                    {link.label}
+                  </a>
+                ))}
               </div>
             )}
           </li>
         </ul>
 
-        {/* Mobile Menu Icon */}
-        <div className="md:hidden text-2xl cursor-pointer" onClick={() => setMenuOpen(!menuOpen)}>
+        <button
+          className="text-2xl text-slate-200 md:hidden"
+          onClick={() => setMenuOpen((value) => !value)}
+          aria-label="Toggle navigation"
+        >
           {menuOpen ? <FaTimes /> : <FaBars />}
-        </div>
-      </div>
+        </button>
+      </nav>
 
-      {/* Mobile Menu */}
       {menuOpen && (
-        <ul className="md:hidden flex flex-col space-y-4 px-6 pb-4 text-base font-medium bg-black/70 text-white">
-          <li>
-            <Link to="about" smooth={true} duration={500} offset={-80} className="block cursor-pointer hover:text-gray-400" onClick={() => setMenuOpen(false)}>About</Link>
-          </li>
-          <li>
-            <Link to="experience" smooth={true} duration={500} offset={-80} className="block cursor-pointer hover:text-gray-400" onClick={() => setMenuOpen(false)}>Experience</Link>
-          </li>
-          <li>
-            <Link to="projects" smooth={true} duration={500} offset={-80} className="block cursor-pointer hover:text-gray-400" onClick={() => setMenuOpen(false)}>Projects</Link>
-          </li>
-          <li>
-            <Link to="skills" smooth={true} duration={500} offset={-80} className="block cursor-pointer hover:text-gray-400" onClick={() => setMenuOpen(false)}>Skills</Link>
-          </li>
-          <li className="pt-2 border-t border-gray-600">
-            <a href="mailto:chandansinghrkt123@gmail.com" className="block py-2 hover:text-gray-400">📧 Email</a>
-            <a href="https://twitter.com/your-twitter-handle" className="block py-2 hover:text-gray-400">🐦 Twitter</a>
-            <a href="https://github.com/Chandankumar2131" className="block py-2 hover:text-gray-400">💻 GitHub</a>
-            <a href="https://linkedin.com/in/chandan-kumar-19748a228" className="block py-2 hover:text-gray-400">🔗 LinkedIn</a>
-          </li>
-        </ul>
+        <div className="border-t border-white/10 bg-slate-950/95 px-6 py-5 backdrop-blur-xl md:hidden">
+          <div className="flex flex-col gap-4 text-sm font-semibold">
+            {navItems.map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                smooth
+                duration={500}
+                offset={-80}
+                className="cursor-pointer text-slate-200 transition hover:text-cyan-300"
+                onClick={() => setMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-5 grid grid-cols-3 gap-3 border-t border-white/10 pt-5">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] px-3 py-3 text-slate-300 transition hover:border-cyan-400/40 hover:text-cyan-300"
+                aria-label={link.label}
+              >
+                {link.icon}
+              </a>
+            ))}
+          </div>
+        </div>
       )}
-    </div>
+    </header>
   );
 }

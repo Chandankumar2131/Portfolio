@@ -1,25 +1,37 @@
 import React from "react";
 import { motion as Motion } from "framer-motion";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle, FaPaperPlane } from "react-icons/fa";
 
 const packages = [
   {
-    title: "Normal Project",
+    title: "UI Implementation Sprint",
     price: "$100",
     time: "2 days",
-    points: ["Single page or small feature", "Responsive UI", "Clean source code"],
+    points: [
+      "Pixel-aligned responsive page or feature build",
+      "Reusable React components with Tailwind styling",
+      "Clean code structure with basic interaction states",
+    ],
   },
   {
-    title: "Full Frontend",
+    title: "Frontend Application Build",
     price: "$300",
     time: "5 days",
-    points: ["Complete React frontend", "Responsive pages", "API-ready components"],
+    points: [
+      "Multi-page React frontend with routed views",
+      "API-ready component architecture and state flow",
+      "Responsive layouts, form handling, and UI polish",
+    ],
   },
   {
-    title: "Full Stack Project",
+    title: "Full Stack Website",
     price: "$600",
     time: "10 days",
-    points: ["Frontend + backend", "REST APIs and database", "Authentication setup"],
+    points: [
+      "Complete website with user-friendly pages, forms, and admin-ready features",
+      "React frontend with Node.js, Express.js, and MongoDB backend",
+      "MongoDB models, REST APIs, auth, and protected routes",
+    ],
   },
 ];
 
@@ -27,49 +39,68 @@ export default function HireMe() {
   return (
     <section
       id="hire-me"
-      className="min-h-screen px-6 py-20 bg-gray-900 text-white flex flex-col items-center"
+      className="relative overflow-hidden bg-slate-950 px-6 py-24 text-white md:px-20"
     >
-      <h2 className="text-4xl font-bold text-center mb-4">Hire Me for Freelancing</h2>
-      <p className="text-gray-400 text-center max-w-2xl mb-14">
-        Simple packages for small projects, frontend builds, and complete MERN stack work.
-      </p>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(14,165,233,0.16),transparent_34%)]" />
 
-      <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 gap-8">
-        {packages.map((item, index) => (
-          <Motion.div
-            key={item.title}
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.12 }}
-            viewport={{ once: true, amount: 0.25 }}
-            whileHover={{ y: -8, scale: 1.03 }}
-            className="bg-[#1c1c1c] border border-[#333] rounded-xl shadow-md p-6 flex flex-col"
-          >
-            <div className="mb-6">
-              <h3 className="text-2xl font-semibold text-green-400 mb-2">
-                {item.title}
-              </h3>
-              <p className="text-4xl font-bold">{item.price}</p>
-              <p className="text-gray-400 mt-2">Delivery: {item.time}</p>
-            </div>
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="mb-16 text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
+            Freelance work
+          </p>
+          <h2 className="text-4xl font-bold md:text-6xl">
+            Hire Me for{" "}
+            <span className="bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">
+              Projects
+            </span>
+          </h2>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-slate-400 md:text-lg">
+            Professional development support for responsive interfaces,
+            production-ready React builds, API integrations, and complete MERN
+            stack web applications.
+          </p>
+        </div>
 
-            <ul className="space-y-3 text-gray-300 mb-8">
-              {item.points.map((point) => (
-                <li key={point} className="flex items-start gap-3">
-                  <FaCheckCircle className="text-green-400 mt-1 shrink-0" />
-                  <span>{point}</span>
-                </li>
-              ))}
-            </ul>
-
-            <a
-              href={`mailto:chandansinghrkt123@gmail.com?subject=Freelance inquiry - ${item.title}`}
-              className="mt-auto text-center px-6 py-3 bg-green-500 hover:bg-green-600 text-white rounded-lg transition duration-300"
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          {packages.map((item, index) => (
+            <Motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, amount: 0.25 }}
+              className="flex rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:bg-cyan-400/10"
             >
-              Hire Me
-            </a>
-          </Motion.div>
-        ))}
+              <div className="flex w-full flex-col">
+                <p className="text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                  Delivery: {item.time}
+                </p>
+                <h3 className="mt-4 text-2xl font-bold text-white">
+                  {item.title}
+                </h3>
+                <p className="mt-4 text-5xl font-black text-white">
+                  {item.price}
+                </p>
+
+                <ul className="my-8 space-y-3 text-slate-300">
+                  {item.points.map((point) => (
+                    <li key={point} className="flex items-start gap-3">
+                      <FaCheckCircle className="mt-1 shrink-0 text-cyan-300" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <a
+                  href={`mailto:chandansinghrkt123@gmail.com?subject=Freelance inquiry - ${item.title}`}
+                  className="mt-auto inline-flex items-center justify-center gap-2 rounded-full bg-cyan-400 px-6 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-300"
+                >
+                  <FaPaperPlane /> Hire Me
+                </a>
+              </div>
+            </Motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

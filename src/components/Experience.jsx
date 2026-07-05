@@ -7,14 +7,12 @@ export default function Experience() {
       title: "Software Engineer (MERN)",
       type: "Full-Time",
       company: "Alice's Tech Solutions",
-      duration: "Jun 2026 – Present",
+      duration: "Jun 2026 - Present",
       tasks: [
-        "Developing and maintaining scalable MERN stack applications for business clients.",
-        "Designing and implementing secure authentication and authorization systems using JWT.",
-        "Building productivity and HRM solutions with attendance tracking, leave management, employee monitoring, and reporting modules.",
-        "Creating responsive and user-friendly interfaces using React.js and modern frontend development practices.",
-        "Developing RESTful APIs, managing MongoDB databases, and optimizing application performance.",
-        "Collaborating on deployment, bug fixing, feature enhancements, and system maintenance.",
+        "Developing production-level MERN stack applications for business and operational workflows.",
+        "Contributing to enterprise web platforms by building scalable features, reusable components, and reliable backend services.",
+        "Creating secure REST APIs, JWT authentication, protected routes, role-based access, and third-party integrations.",
+        "Improving responsive React interfaces, application performance, deployment readiness, and overall system reliability.",
       ],
       stack: [
         "MongoDB",
@@ -23,24 +21,26 @@ export default function Experience() {
         "Node.js",
         "Redux Toolkit",
         "JWT",
+        "AWS",
+        "Docker",
+        "Nginx",
+        "Razorpay",
+        "Cloudinary",
+        "CI/CD",
         "Git",
         "Postman",
-        "Vercel",
       ],
     },
-
     {
       title: "MERN Stack Intern",
       type: "Internship",
       company: "Tech Mahindra",
-      duration: "Dec 2025 – May 2026",
+      duration: "Dec 2025 - May 2026",
       tasks: [
-        "Worked on full-stack web application development using the MERN stack.",
-        "Developed and integrated REST APIs for seamless frontend-backend communication.",
-        "Implemented authentication, authorization, and role-based access control using JWT.",
-        "Collaborated with development teams using Git and industry-standard workflows.",
-        "Participated in debugging, testing, code reviews, and performance optimization.",
-        "Gained hands-on experience with real-world software development and deployment processes.",
+        "Gained hands-on experience in full-stack application development using the MERN stack.",
+        "Worked with REST API integration, frontend-backend communication, and reusable React component patterns.",
+        "Practiced authentication, authorization, debugging, testing, and deployment-oriented development workflows.",
+        "Collaborated in a professional engineering environment using Git, Postman, issue tracking, and code review practices.",
       ],
       stack: [
         "MongoDB",
@@ -48,83 +48,103 @@ export default function Experience() {
         "React.js",
         "Node.js",
         "JWT",
+        "REST APIs",
         "Git",
         "Postman",
       ],
     },
-
     {
       title: "MERN Stack Trainee",
       type: "Industrial Training",
       company: "Ducat, Noida",
-      duration: "May 2024 – Mar 2025",
+      duration: "May 2024 - Mar 2025",
       tasks: [
-        "Completed 10-month industrial training in MERN stack development.",
-        "Built real-world applications using MongoDB, Express.js, React.js, and Node.js.",
-        "Practiced REST APIs, CRUD operations, authentication, middleware, and database integration.",
-        "Strengthened debugging, testing, performance optimization, and deployment workflows.",
+        "Completed structured industrial training focused on MERN stack fundamentals and full-stack project development.",
+        "Built application modules using React.js, Node.js, Express.js, MongoDB, CRUD operations, routing, middleware, and API integration.",
+        "Strengthened JavaScript fundamentals, backend architecture, database connectivity, debugging, and deployment basics.",
+        "Practiced building responsive interfaces and connecting frontend views with backend services through REST APIs.",
       ],
       stack: [
-        "MongoDB",
-        "Express.js",
+        "JavaScript",
         "React.js",
         "Node.js",
+        "Express.js",
+        "MongoDB",
+        "REST APIs",
         "Git",
-        "Postman",
       ],
     },
   ];
 
   return (
-    <div
+    <section
       id="experience"
-      className="min-h-screen px-6 py-20 bg-gray-900 text-white flex flex-col items-center"
+      className="relative overflow-hidden bg-slate-950 px-6 py-24 text-white md:px-20"
     >
-      <h2 className="text-4xl font-bold mb-16 text-center text-green-400">
-        Experience
-      </h2>
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(14,165,233,0.12),transparent_35%)]" />
 
-      <div className="w-full max-w-5xl space-y-12">
-        {experiences.map((exp, index) => (
-          <div
-            key={index}
-            className="bg-[#1a1a1a] border border-[#2e2e2e] p-6 md:p-8 rounded-2xl shadow-md transition-all duration-300 hover:shadow-[0_0_20px_3px_rgba(34,197,94,0.3)] hover:border-green-500"
-          >
-            <div className="mb-4">
-              <h3 className="text-2xl font-semibold flex items-center gap-2 text-green-400">
-                <span>💼</span> {exp.title}
-                <span className="text-sm font-normal text-gray-400 ml-2">
-                  - {exp.type}
-                </span>
-              </h3>
+      <div className="relative z-10 mx-auto max-w-6xl">
+        <div className="mb-16 text-center">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-cyan-400">
+            Career journey
+          </p>
+          <h2 className="text-4xl font-bold md:text-6xl">
+            Professional{" "}
+            <span className="bg-gradient-to-r from-cyan-300 to-blue-500 bg-clip-text text-transparent">
+              Experience
+            </span>
+          </h2>
+        </div>
 
-              <p className="text-gray-400 mt-1">
-                {exp.company} | <span>{exp.duration}</span>
-              </p>
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <div
+              key={exp.title}
+              className="group relative rounded-3xl border border-white/10 bg-white/[0.04] p-6 shadow-2xl backdrop-blur-md transition duration-300 hover:-translate-y-2 hover:border-cyan-400/40 hover:bg-cyan-400/10 md:p-8"
+            >
+              <div className="absolute left-6 top-8 hidden h-12 w-12 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-400/10 text-lg font-bold text-cyan-300 md:flex">
+                0{index + 1}
+              </div>
+
+              <div className="md:pl-20">
+                <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+                  <div>
+                    <p className="mb-2 text-sm font-semibold uppercase tracking-[0.22em] text-cyan-300">
+                      {exp.type}
+                    </p>
+                    <h3 className="text-2xl font-bold text-white md:text-3xl">
+                      {exp.title}
+                    </h3>
+                    <p className="mt-2 text-slate-400">
+                      {exp.company} | {exp.duration}
+                    </p>
+                  </div>
+                </div>
+
+                <ul className="mt-6 grid gap-3 text-slate-300 md:grid-cols-2">
+                  {exp.tasks.map((task) => (
+                    <li key={task} className="flex items-start gap-3">
+                      <FaCheckCircle className="mt-1 shrink-0 text-cyan-300" />
+                      <span className="leading-7">{task}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {exp.stack.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1 text-sm text-cyan-100"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
-
-            <ul className="list-none space-y-2 mb-5 text-gray-300">
-              {exp.tasks.map((task, i) => (
-                <li key={i} className="flex gap-3 items-start">
-                  <FaCheckCircle className="text-green-400 mt-1 shrink-0" />
-                  <span>{task}</span>
-                </li>
-              ))}
-            </ul>
-
-            <div className="flex flex-wrap gap-2">
-              {exp.stack.map((tech, i) => (
-                <span
-                  key={i}
-                  className="px-3 py-1 text-sm rounded-full bg-green-900/10 text-green-300 border border-green-700"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
